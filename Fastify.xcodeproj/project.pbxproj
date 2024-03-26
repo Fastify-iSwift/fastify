@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5E6C6BD92BB2FC890076AF9E /* ProgressCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E6C6BD82BB2FC890076AF9E /* ProgressCircle.swift */; };
+		5E86846B2BB30B87001C3301 /* FastifyTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E86846A2BB30B87001C3301 /* FastifyTabView.swift */; };
+		5E86846E2BB30DFE001C3301 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E86846D2BB30DFE001C3301 /* HomeView.swift */; };
+		5E8684732BB31C99001C3301 /* FastingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E8684722BB31C99001C3301 /* FastingViewModel.swift */; };
 		622792682BAA706B00CA69FE /* FastifyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 622792672BAA706B00CA69FE /* FastifyApp.swift */; };
 		6227926A2BAA706B00CA69FE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 622792692BAA706B00CA69FE /* ContentView.swift */; };
 		6227926C2BAA706D00CA69FE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6227926B2BAA706D00CA69FE /* Assets.xcassets */; };
@@ -14,6 +18,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5E6C6BD82BB2FC890076AF9E /* ProgressCircle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressCircle.swift; sourceTree = "<group>"; };
+		5E86846A2BB30B87001C3301 /* FastifyTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FastifyTabView.swift; sourceTree = "<group>"; };
+		5E86846D2BB30DFE001C3301 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		5E8684722BB31C99001C3301 /* FastingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FastingViewModel.swift; sourceTree = "<group>"; };
 		622792642BAA706B00CA69FE /* Fastify.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Fastify.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		622792672BAA706B00CA69FE /* FastifyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FastifyApp.swift; sourceTree = "<group>"; };
 		622792692BAA706B00CA69FE /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -32,6 +40,52 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5E6C6BD72BB2FC6D0076AF9E /* Components */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		5E8684692BB30AEC001C3301 /* Tab */ = {
+			isa = PBXGroup;
+			children = (
+				5E86846C2BB30DB3001C3301 /* View */,
+			);
+			path = Tab;
+			sourceTree = "<group>";
+		};
+		5E86846C2BB30DB3001C3301 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5E86846A2BB30B87001C3301 /* FastifyTabView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		5E86846F2BB31952001C3301 /* SubViews */ = {
+			isa = PBXGroup;
+			children = (
+				5E6C6BD82BB2FC890076AF9E /* ProgressCircle.swift */,
+			);
+			path = SubViews;
+			sourceTree = "<group>";
+		};
+		5E8684702BB319AB001C3301 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		5E8684712BB319B1001C3301 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				5E8684722BB31C99001C3301 /* FastingViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		6227925B2BAA706B00CA69FE = {
 			isa = PBXGroup;
 			children = (
@@ -52,9 +106,10 @@
 			isa = PBXGroup;
 			children = (
 				622792762BAA709900CA69FE /* App */,
+				5E6C6BD72BB2FC6D0076AF9E /* Components */,
 				622792772BAA711C00CA69FE /* Modules */,
-				622792752BAA708400CA69FE /* Resources */,
 				6227926D2BAA706D00CA69FE /* Preview Content */,
+				622792752BAA708400CA69FE /* Resources */,
 			);
 			path = Fastify;
 			sourceTree = "<group>";
@@ -78,6 +133,7 @@
 		622792762BAA709900CA69FE /* App */ = {
 			isa = PBXGroup;
 			children = (
+				622792692BAA706B00CA69FE /* ContentView.swift */,
 				622792672BAA706B00CA69FE /* FastifyApp.swift */,
 			);
 			path = App;
@@ -86,23 +142,27 @@
 		622792772BAA711C00CA69FE /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				5E8684692BB30AEC001C3301 /* Tab */,
 				622792792BAA742200CA69FE /* Home */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
 		};
-		622792782BAA71C600CA69FE /* View */ = {
+		622792782BAA71C600CA69FE /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				622792692BAA706B00CA69FE /* ContentView.swift */,
+				5E86846F2BB31952001C3301 /* SubViews */,
+				5E86846D2BB30DFE001C3301 /* HomeView.swift */,
 			);
-			path = View;
+			path = Views;
 			sourceTree = "<group>";
 		};
 		622792792BAA742200CA69FE /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				622792782BAA71C600CA69FE /* View */,
+				5E8684702BB319AB001C3301 /* Model */,
+				5E8684712BB319B1001C3301 /* ViewModel */,
+				622792782BAA71C600CA69FE /* Views */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -179,6 +239,10 @@
 			files = (
 				6227926A2BAA706B00CA69FE /* ContentView.swift in Sources */,
 				622792682BAA706B00CA69FE /* FastifyApp.swift in Sources */,
+				5E6C6BD92BB2FC890076AF9E /* ProgressCircle.swift in Sources */,
+				5E8684732BB31C99001C3301 /* FastingViewModel.swift in Sources */,
+				5E86846E2BB30DFE001C3301 /* HomeView.swift in Sources */,
+				5E86846B2BB30B87001C3301 /* FastifyTabView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -237,7 +301,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -294,7 +358,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
