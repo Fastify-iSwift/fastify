@@ -13,7 +13,7 @@ struct FastifyTabView: View {
             // MARK: Home
             HomeView()
                 .tabItem {
-                    Label("Fasting", systemImage: "flame.circle")
+                    Label("Fasting", systemImage: "clock.circle")
                 }
             
             // MARK: History
