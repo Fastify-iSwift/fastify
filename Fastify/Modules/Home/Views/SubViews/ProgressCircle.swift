@@ -14,6 +14,16 @@ struct ProgressCircle: View {
         .publish(every: 1, on: .main, in: .common)
         .autoconnect()
     
+    var elapsedText: String {
+        let formatter = DateComponentsFormatter()
+        formatter.allowedUnits = [.hour, .minute, .second]
+        formatter.unitsStyle = .positional
+        formatter.zeroFormattingBehavior = .pad
+        
+        let formattedString = formatter.string(from: fastingVM.elapsedTime) ?? "Invalid Interval"
+        return formattedString
+    }
+    
     var body: some View {
         ZStack {
             Circle()
@@ -28,23 +38,14 @@ struct ProgressCircle: View {
                 .animation(.easeInOut(duration: 1.0), value: fastingVM.progress)
             
             VStack(spacing: 30) {
-                VStack(spacing: 5) {
-                    Text("Elapsed Time")
-                        .opacity(0.7)
-                    
-                    Text(fastingVM.startTime, style: .timer)
+                VStack(spacing: 8) {
+                    Text(elapsedText)
                         .font(.title)
                         .fontWeight(.bold)
-                }
-                .padding(.top)
-                
-                VStack(spacing: 5) {
-                    Text("End Time")
-                        .opacity(0.7)
                     
-                    Text(fastingVM.endTime, style: .timer)
+                    Text(fastingVM.fastingState == .fasting ? "Fasting Time" : "Eating Time")
                         .font(.title)
-                        .fontWeight(.bold)
+                        .foregroundStyle(.neutral05)
                 }
             }
         }

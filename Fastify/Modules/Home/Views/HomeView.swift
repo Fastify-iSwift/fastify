@@ -11,7 +11,11 @@ struct HomeView: View {
     @StateObject var fastingVM = FastingViewModel()
     
     var body: some View {
-        VStack {
+        VStack(spacing: 56) {
+            Text(fastingVM.fastingState == .fasting ? "You're Fasting" : "")
+                .font(.title)
+                .fontWeight(.bold)
+            
             ProgressCircle()
                 .environmentObject(fastingVM)
             
