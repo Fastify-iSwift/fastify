@@ -12,6 +12,10 @@
 		6227926C2BAA706D00CA69FE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6227926B2BAA706D00CA69FE /* Assets.xcassets */; };
 		6227926F2BAA706D00CA69FE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6227926E2BAA706D00CA69FE /* Preview Assets.xcassets */; };
 		627F4E972BB45F0A00DE2CD8 /* AddFastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 627F4E962BB45F0A00DE2CD8 /* AddFastView.swift */; };
+		62970D0E2BC1A20D0027CFF7 /* VDashLineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62970D0D2BC1A20D0027CFF7 /* VDashLineView.swift */; };
+		62DD3A132BC1FD5F00871964 /* TimelineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62DD3A122BC1FD5F00871964 /* TimelineView.swift */; };
+		62DD3A152BC2089E00871964 /* TimeIntervalUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62DD3A142BC2089E00871964 /* TimeIntervalUtil.swift */; };
+		62DD3A172BC208DC00871964 /* DateUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62DD3A162BC208DC00871964 /* DateUtil.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +25,10 @@
 		6227926B2BAA706D00CA69FE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6227926E2BAA706D00CA69FE /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		627F4E962BB45F0A00DE2CD8 /* AddFastView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFastView.swift; sourceTree = "<group>"; };
+		62970D0D2BC1A20D0027CFF7 /* VDashLineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VDashLineView.swift; sourceTree = "<group>"; };
+		62DD3A122BC1FD5F00871964 /* TimelineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelineView.swift; sourceTree = "<group>"; };
+		62DD3A142BC2089E00871964 /* TimeIntervalUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeIntervalUtil.swift; sourceTree = "<group>"; };
+		62DD3A162BC208DC00871964 /* DateUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateUtil.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +61,8 @@
 		622792662BAA706B00CA69FE /* Fastify */ = {
 			isa = PBXGroup;
 			children = (
+				62D151E32BC1E4FD007F15B3 /* Utils */,
+				62970D0B2BC1A1C10027CFF7 /* Components */,
 				622792762BAA709900CA69FE /* App */,
 				622792772BAA711C00CA69FE /* Modules */,
 				622792752BAA708400CA69FE /* Resources */,
@@ -108,6 +118,40 @@
 				622792782BAA71C600CA69FE /* View */,
 			);
 			path = Home;
+			sourceTree = "<group>";
+		};
+		62970D0B2BC1A1C10027CFF7 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				62DD3A112BC1FD4D00871964 /* Timelines */,
+				62970D0C2BC1A1CD0027CFF7 /* Lines */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		62970D0C2BC1A1CD0027CFF7 /* Lines */ = {
+			isa = PBXGroup;
+			children = (
+				62970D0D2BC1A20D0027CFF7 /* VDashLineView.swift */,
+			);
+			path = Lines;
+			sourceTree = "<group>";
+		};
+		62D151E32BC1E4FD007F15B3 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				62DD3A142BC2089E00871964 /* TimeIntervalUtil.swift */,
+				62DD3A162BC208DC00871964 /* DateUtil.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		62DD3A112BC1FD4D00871964 /* Timelines */ = {
+			isa = PBXGroup;
+			children = (
+				62DD3A122BC1FD5F00871964 /* TimelineView.swift */,
+			);
+			path = Timelines;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -181,8 +225,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				627F4E972BB45F0A00DE2CD8 /* AddFastView.swift in Sources */,
+				62DD3A132BC1FD5F00871964 /* TimelineView.swift in Sources */,
+				62970D0E2BC1A20D0027CFF7 /* VDashLineView.swift in Sources */,
 				6227926A2BAA706B00CA69FE /* ContentView.swift in Sources */,
+				62DD3A152BC2089E00871964 /* TimeIntervalUtil.swift in Sources */,
 				622792682BAA706B00CA69FE /* FastifyApp.swift in Sources */,
+				62DD3A172BC208DC00871964 /* DateUtil.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

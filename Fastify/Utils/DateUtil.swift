@@ -6,3 +6,12 @@
 //
 
 import Foundation
+
+extension Date {
+    func formattedTime() -> String {
+        let df = DateFormatter()
+        df.dateFormat = "HH:mm"
+        df.timeZone = TimeZone.current
+        return df.string(from: self)
+    }
+}

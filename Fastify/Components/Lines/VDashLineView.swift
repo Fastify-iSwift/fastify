@@ -1,5 +1,5 @@
 //
-//  VDashLine.swift
+//  VDashLineView.swift
 //  Fastify
 //
 //  Created by Riza Adi Kurniawan on 06/04/24.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct VDashLine: View {
+struct VDashLineView: View {
     var body: some View {
         VLineShape()
             .stroke(style: StrokeStyle(lineWidth: 2, dash: [2]))
@@ -26,5 +26,5 @@ struct VLineShape: Shape {
 }
 
 #Preview {
-    VDashLine()
+    VDashLineView()
 }

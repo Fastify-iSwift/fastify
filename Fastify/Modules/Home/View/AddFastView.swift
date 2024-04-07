@@ -12,18 +12,12 @@ struct AddFast: View {
     @State private var endTime = Date(timeIntervalSinceNow: (60 * 60))
     
     var totalTime: TimeInterval {
-        endTime.timeIntervalSince(startTime)
+        guard startTime <= endTime else {
+            return 0
+        }
+        return endTime.timeIntervalSince(startTime)
     }
     
-    var dateFormatter: DateComponentsFormatter {
-        let df = DateComponentsFormatter()
-        df.allowedUnits = [.hour,.minute,]
-        df.unitsStyle = .spellOut
-        df.zeroFormattingBehavior = .pad
-        
-        
-        return df
-    }
     
     var body: some View {
         NavigationStack {
@@ -32,16 +26,32 @@ struct AddFast: View {
                     .font(.headline)
                     .padding()
                 
-                Text(dateFormatter.string(from: totalTime) ?? "")
+                HStack(alignment:.firstTextBaseline, spacing: 03) {
+                    let (hours, minutes, seconds) = totalTime.formattedTimeFull()
+                    
+                    Text(hours)
+                    Text("h")
+                        .baselineOffset(-6)
+                        .font(.system(size: 30))
+                    Text(":")
+                    Text(minutes)
+                    Text("h")
+                        .baselineOffset(-6)
+                        .font(.system(size: 30))
+                    Text(":")
+                    Text(seconds)
+                    Text("s")
+                        .baselineOffset(-6)
+                        .font(.system(size: 30))
+                }
                     .font(.system(size: 48))
                     .fontWeight(.semibold)
                 
-                DatePicker("Start", selection: $startTime, displayedComponents: .hourAndMinute)
-                    .fontWeight(.medium)
-                
-                DatePicker("End", selection: $endTime, displayedComponents: .hourAndMinute)
-                    .padding(.bottom, 20)
-                    .fontWeight(.medium)
+                TimelineView(
+                    startTime: $startTime,
+                    endTime: $endTime
+                )
+                .padding(.bottom, 20)
                 
                 Button("Start Fasting") {
                     
