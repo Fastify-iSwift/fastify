@@ -18,7 +18,7 @@ struct AddFast: View {
     var dateFormatter: DateComponentsFormatter {
         let df = DateComponentsFormatter()
         df.allowedUnits = [.hour,.minute,]
-        df.unitsStyle = .abbreviated
+        df.unitsStyle = .spellOut
         df.zeroFormattingBehavior = .pad
         
         
