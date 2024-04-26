@@ -81,13 +81,6 @@
 			path = SubViews;
 			sourceTree = "<group>";
 		};
-		5E8684702BB319AB001C3301 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
 		5E8684712BB319B1001C3301 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
@@ -173,7 +166,6 @@
 		622792792BAA742200CA69FE /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				5E8684702BB319AB001C3301 /* Model */,
 				5E8684712BB319B1001C3301 /* ViewModel */,
 				622792782BAA71C600CA69FE /* Views */,
 			);
@@ -295,7 +287,6 @@
 				5E8684732BB31C99001C3301 /* FastingViewModel.swift in Sources */,
 				5E86846E2BB30DFE001C3301 /* HomeView.swift in Sources */,
 				5E86846B2BB30B87001C3301 /* FastifyTabView.swift in Sources */,
-
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
