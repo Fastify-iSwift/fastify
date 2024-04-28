@@ -15,6 +15,9 @@
 		6227926A2BAA706B00CA69FE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 622792692BAA706B00CA69FE /* ContentView.swift */; };
 		6227926C2BAA706D00CA69FE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6227926B2BAA706D00CA69FE /* Assets.xcassets */; };
 		6227926F2BAA706D00CA69FE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6227926E2BAA706D00CA69FE /* Preview Assets.xcassets */; };
+		625DB2D72BDBF50C00B1B221 /* Fasting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 625DB2D62BDBF50C00B1B221 /* Fasting.swift */; };
+		625DB2D92BDBFE6A00B1B221 /* PreviewSampleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 625DB2D82BDBFE6A00B1B221 /* PreviewSampleData.swift */; };
+		625DB2DB2BDC029200B1B221 /* ExampleCRUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 625DB2DA2BDC029200B1B221 /* ExampleCRUD.swift */; };
 		627F4E972BB45F0A00DE2CD8 /* AddFastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 627F4E962BB45F0A00DE2CD8 /* AddFastView.swift */; };
 		62970D0E2BC1A20D0027CFF7 /* VDashLineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62970D0D2BC1A20D0027CFF7 /* VDashLineView.swift */; };
 		62DD3A132BC1FD5F00871964 /* TimelineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62DD3A122BC1FD5F00871964 /* TimelineView.swift */; };
@@ -32,6 +35,9 @@
 		622792692BAA706B00CA69FE /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		6227926B2BAA706D00CA69FE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6227926E2BAA706D00CA69FE /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		625DB2D62BDBF50C00B1B221 /* Fasting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fasting.swift; sourceTree = "<group>"; };
+		625DB2D82BDBFE6A00B1B221 /* PreviewSampleData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewSampleData.swift; sourceTree = "<group>"; };
+		625DB2DA2BDC029200B1B221 /* ExampleCRUD.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleCRUD.swift; sourceTree = "<group>"; };
 		627F4E962BB45F0A00DE2CD8 /* AddFastView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFastView.swift; sourceTree = "<group>"; };
 		62970D0D2BC1A20D0027CFF7 /* VDashLineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VDashLineView.swift; sourceTree = "<group>"; };
 		62DD3A122BC1FD5F00871964 /* TimelineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelineView.swift; sourceTree = "<group>"; };
@@ -108,6 +114,7 @@
 		622792662BAA706B00CA69FE /* Fastify */ = {
 			isa = PBXGroup;
 			children = (
+				625DB2D52BDBF4C900B1B221 /* Models */,
 				62D151E32BC1E4FD007F15B3 /* Utils */,
 				62970D0B2BC1A1C10027CFF7 /* Components */,
 				622792762BAA709900CA69FE /* App */,
@@ -172,6 +179,14 @@
 			path = Home;
 			sourceTree = "<group>";
 		};
+		625DB2D52BDBF4C900B1B221 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				625DB2D62BDBF50C00B1B221 /* Fasting.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		62970D0B2BC1A1C10027CFF7 /* Components */ = {
 			isa = PBXGroup;
 			children = (
@@ -194,6 +209,8 @@
 			children = (
 				62DD3A142BC2089E00871964 /* TimeIntervalUtil.swift */,
 				62DD3A162BC208DC00871964 /* DateUtil.swift */,
+				625DB2D82BDBFE6A00B1B221 /* PreviewSampleData.swift */,
+				625DB2DA2BDC029200B1B221 /* ExampleCRUD.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -279,11 +296,14 @@
 				627F4E972BB45F0A00DE2CD8 /* AddFastView.swift in Sources */,
 				62DD3A132BC1FD5F00871964 /* TimelineView.swift in Sources */,
 				62970D0E2BC1A20D0027CFF7 /* VDashLineView.swift in Sources */,
+				625DB2D92BDBFE6A00B1B221 /* PreviewSampleData.swift in Sources */,
 				6227926A2BAA706B00CA69FE /* ContentView.swift in Sources */,
+				625DB2D72BDBF50C00B1B221 /* Fasting.swift in Sources */,
 				62DD3A152BC2089E00871964 /* TimeIntervalUtil.swift in Sources */,
 				622792682BAA706B00CA69FE /* FastifyApp.swift in Sources */,
 				62DD3A172BC208DC00871964 /* DateUtil.swift in Sources */,
 				5E6C6BD92BB2FC890076AF9E /* ProgressCircle.swift in Sources */,
+				625DB2DB2BDC029200B1B221 /* ExampleCRUD.swift in Sources */,
 				5E8684732BB31C99001C3301 /* FastingViewModel.swift in Sources */,
 				5E86846E2BB30DFE001C3301 /* HomeView.swift in Sources */,
 				5E86846B2BB30B87001C3301 /* FastifyTabView.swift in Sources */,

@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import SwiftData
 
 @main
 struct FastifyApp: App {
@@ -13,5 +14,8 @@ struct FastifyApp: App {
         WindowGroup {
             ContentView()
         }
+//       set up the container for the whole windowGroup scene.
+//       all of these views will write and read from single container (this)
+        .modelContainer(for: Fasting.self)
     }
 }
