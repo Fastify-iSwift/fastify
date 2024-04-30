@@ -8,13 +8,16 @@
 import SwiftUI
 
 struct LongButton: View {
+    var action: () -> Void
     @State var isFasting: Bool
+    var title: String?
     
     var body: some View {
-        Button {
+        Button(action: {
+            self.action()
             self.isFasting.toggle()
-        } label: {
-            Text(isFasting ? "End Fasting" : "Start Fasting")
+        }) {
+            Text((isFasting ? "End Fasting" : title) ?? "")
                 .frame(maxWidth: .infinity)
                 .padding()
                 .background(
@@ -33,9 +36,7 @@ struct LongButton: View {
 
 #if DEBUG
 #Preview {
-    Group {
-        LongButton(isFasting: false)
-    }
-    .previewLayout(.fixed(width: 300, height: 60))
+    LongButton(action: {}, isFasting: false, title: "Add Fasting")
+        .previewLayout(.fixed(width: 300, height: 60))
 }
 #endif

@@ -9,6 +9,16 @@ import SwiftUI
 
 struct HomeView: View {
     @StateObject var fastingVM = FastingViewModel()
+    @State private var startTime = Date()
+    @State private var endTime = Date(timeIntervalSinceNow: (60 * 60))
+    @State private var showAlert = false
+    
+    var totalTime: TimeInterval {
+        guard startTime <= endTime else {
+            return 0
+        }
+        return endTime.timeIntervalSince(startTime)
+    }
     
     var body: some View {
         VStack(spacing: 56) {
@@ -19,14 +29,26 @@ struct HomeView: View {
             ProgressCircle()
                 .environmentObject(fastingVM)
             
-            Button {
-                fastingVM.toggleFastingState()
-            } label: {
-                Text(fastingVM.fastingState == .fasting ? "END" : "START")
-                    .font(.title)
-                    .fontWeight(.semibold)
-                    .padding(.horizontal, 24)
-                    .padding(.vertical, 8)
+            TimelineView(startTime: $startTime, endTime: $endTime, showIcons: false)
+            
+            LongButton(
+                action: {
+                    if fastingVM.fastingState == .fasting {
+                        showAlert = true
+                    }
+                    fastingVM.toggleFastingState()
+                },
+                isFasting: fastingVM.fastingState == .fasting,
+                title: "Create Fasting"
+            )
+        }
+        .padding()
+        .alert("Are you sure you want to end this fasting?", isPresented: $showAlert) {
+            Button("Cancel", role: .cancel) { }
+            
+            Button("End", role: .destructive) {
+                // MARK: Handle end fasting
+//                fastingVM.toggleFastingState()
             }
         }
     }
