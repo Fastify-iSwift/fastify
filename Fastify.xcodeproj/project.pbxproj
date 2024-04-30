@@ -11,6 +11,7 @@
 		5E86846B2BB30B87001C3301 /* FastifyTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E86846A2BB30B87001C3301 /* FastifyTabView.swift */; };
 		5E86846E2BB30DFE001C3301 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E86846D2BB30DFE001C3301 /* HomeView.swift */; };
 		5E8684732BB31C99001C3301 /* FastingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E8684722BB31C99001C3301 /* FastingViewModel.swift */; };
+		5EFFACC12BE0F8FE00B074AF /* LongButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EFFACC02BE0F8FE00B074AF /* LongButton.swift */; };
 		622792682BAA706B00CA69FE /* FastifyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 622792672BAA706B00CA69FE /* FastifyApp.swift */; };
 		6227926A2BAA706B00CA69FE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 622792692BAA706B00CA69FE /* ContentView.swift */; };
 		6227926C2BAA706D00CA69FE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6227926B2BAA706D00CA69FE /* Assets.xcassets */; };
@@ -27,6 +28,7 @@
 		5E86846A2BB30B87001C3301 /* FastifyTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FastifyTabView.swift; sourceTree = "<group>"; };
 		5E86846D2BB30DFE001C3301 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		5E8684722BB31C99001C3301 /* FastingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FastingViewModel.swift; sourceTree = "<group>"; };
+		5EFFACC02BE0F8FE00B074AF /* LongButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LongButton.swift; sourceTree = "<group>"; };
 		622792642BAA706B00CA69FE /* Fastify.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Fastify.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		622792672BAA706B00CA69FE /* FastifyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FastifyApp.swift; sourceTree = "<group>"; };
 		622792692BAA706B00CA69FE /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -87,6 +89,14 @@
 				5E8684722BB31C99001C3301 /* FastingViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		5EFFACBF2BE0F8E900B074AF /* Buttons */ = {
+			isa = PBXGroup;
+			children = (
+				5EFFACC02BE0F8FE00B074AF /* LongButton.swift */,
+			);
+			path = Buttons;
 			sourceTree = "<group>";
 		};
 		6227925B2BAA706B00CA69FE = {
@@ -175,6 +185,7 @@
 		62970D0B2BC1A1C10027CFF7 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				5EFFACBF2BE0F8E900B074AF /* Buttons */,
 				62DD3A112BC1FD4D00871964 /* Timelines */,
 				62970D0C2BC1A1CD0027CFF7 /* Lines */,
 			);
@@ -283,6 +294,7 @@
 				62DD3A152BC2089E00871964 /* TimeIntervalUtil.swift in Sources */,
 				622792682BAA706B00CA69FE /* FastifyApp.swift in Sources */,
 				62DD3A172BC208DC00871964 /* DateUtil.swift in Sources */,
+				5EFFACC12BE0F8FE00B074AF /* LongButton.swift in Sources */,
 				5E6C6BD92BB2FC890076AF9E /* ProgressCircle.swift in Sources */,
 				5E8684732BB31C99001C3301 /* FastingViewModel.swift in Sources */,
 				5E86846E2BB30DFE001C3301 /* HomeView.swift in Sources */,
