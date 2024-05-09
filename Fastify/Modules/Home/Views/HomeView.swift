@@ -29,7 +29,11 @@ struct HomeView: View {
             ProgressCircle()
                 .environmentObject(fastingVM)
             
-            TimelineView(startTime: $startTime, endTime: $endTime, showIcons: false)
+            if fastingVM.fastingState == .notStarted {
+                TimelineView(startTime: $startTime, endTime: $endTime, showIcons: false)
+            } else {
+                TimelineView(startTime: $startTime, endTime: $endTime)
+            }
             
             LongButton(
                 action: {
